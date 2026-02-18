@@ -1,4 +1,4 @@
-package com.deshmate.Dao;
+package com.deskmate.Dao;
 
 import java.util.List;
 import java.util.Optional;
