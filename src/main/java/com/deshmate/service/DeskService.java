@@ -17,8 +17,8 @@ public class DeskService {
     }
 
     public long addDesk(String code, String name) {
-        ValidationUtil.requireNonBlank(code, "deskCode");
-        ValidationUtil.requireNonBlank(name, "name");
+        ValidationUtility.requireNonBlank(code, "deskCode");
+        ValidationUtility.requireNonBlank(name, "name");
 
         if (deskDao.findByCode(code).isPresent()) {
             throw new ValidationException("Desk code already exists: " + code);
