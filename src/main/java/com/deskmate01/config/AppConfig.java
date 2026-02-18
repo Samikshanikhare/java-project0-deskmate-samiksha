@@ -1,9 +1,10 @@
 package com.deskmate01.config;
 
-import com.deskmate.dbps.controller.*;
-import com.deskmate.dbps.dao.*;
-import com.deskmate.dbps.dao.impl.*;
-import com.deskmate.dbps.service.*;
+import com.deshmate.service.DeskService;
+import com.deskmate.Dao.DeskDao;
+import com.deskmate.Dao.Impl.JdbcDeskDao;
+import com.deskmate.controller.DeskController;
+
 
 public class AppConfig {
 
@@ -13,17 +14,5 @@ public class AppConfig {
         return new DeskController(deskService);
     }
 
-    public BookingController bookingController() {
-        DeskDao deskDao = new JdbcDeskDao();
-        BookingDao bookingDao = new JdbcBookingDao();
-        PaymentDao paymentDao = new JdbcPaymentDao();
-        BookingService bookingService = new BookingService(deskDao, bookingDao, paymentDao);
-        return new BookingController(bookingService);
-    }
-
-    public ReportController reportController() {
-        ReportDao reportDao = new JdbcReportDao();
-        ReportService reportService = new ReportService(reportDao);
-        return new ReportController(reportService);
-    }
+   
 }
