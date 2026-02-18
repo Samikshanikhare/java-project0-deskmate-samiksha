@@ -3,6 +3,12 @@
   <groupId>com.project</groupId>
   <artifactId>java-project0-deskmate-samiksha</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+   <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <junit.version>5.10.2</junit.version>
+        <log4j.version>2.23.1</log4j.version>
+    </properties>
   
   <dependencies>
   
@@ -13,6 +19,17 @@
     <version>9.6.0</version>
     <scope>compile</scope>
 </dependency>
+
+<dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
   
   </dependencies>
 </project>
