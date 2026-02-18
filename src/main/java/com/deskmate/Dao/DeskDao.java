@@ -10,4 +10,5 @@ public interface DeskDao {
     void deactivateDesk(long deskId);
     Optional<Desk> findByCode(String code);
     List<Desk> listActive();
+	Optional<Desk> findById(long deskId);
 }
